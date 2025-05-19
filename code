@@ -1,0 +1,47 @@
+import numpy as np
+from numpy import random
+
+pythonArray = [1, 2, 3, 4, 5]
+sqrPythonArray = []
+for number in pythonArray:
+    sqrPythonArray.append(number ** 2)
+print(sqrPythonArray)
+
+arrayNP = np.array([1, 2, 3, 4, 5])
+sqrArrayNP= np.square(arrayNP)
+print (sqrArrayNP)
+# As you can see, squaring in Numpy is more clear-cut and efficient then in basic Python
+
+# -------- #
+
+fourMatrix = np.random.randint(100,size=(4,4))
+print(np.matrix(fourMatrix))
+# or print(fourMatrix)
+
+# -------- #
+
+idMatrix = np.identity(3)
+print(idMatrix)
+
+array = np.random.randint(100,size=(20))
+print(array)
+
+# -------- #
+
+
+fiveMatrix = np.random.randint(25,size=(5,5))
+print(fiveMatrix)
+
+fM_rowThree = fiveMatrix[3]
+print(fM_rowThree)
+fM_twoColumn = fiveMatrix[:, 3:5]
+print(fM_twoColumn)
+fM_center = fiveMatrix[1:4, 1:4]
+print(fM_center)
+
+# -------- #
+
+#going to be borrowing the 1D array already made
+#array = np.random.randint(100,size=(20)) #this one on a prev line
+array2 = array.reshape(4,5)
+print(array2)
